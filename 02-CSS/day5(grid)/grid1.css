@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.box{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns:  1fr 1fr;
+    background-color: pink;
+    gap:0;
+    padding: 0;
+    height: 400px;  
+    width: 400px;
+}
+
+.box1{
+    background-color: aliceblue;
+}
+.box2{
+    background-color:antiquewhite;
+}
+.box3{
+    background-color:aqua;
+}
+.box4{
+    background-color:aquamarine;
+}

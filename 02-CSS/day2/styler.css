@@ -1,0 +1,41 @@
+/*span{
+    background-color: bisque;
+}
+
+*{
+    margin: 0px;
+    padding: 0px
+    
+    ;
+}*/
+
+span{
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+}
+
+h1{
+    display: inline-block
+    ;
+    background-color: beige;
+    height: 100px;
+    width: 100px;
+    padding: 100px;
+    margin: 20px;
+    box-sizing: content-box;
+    border: 10px black solid;
+}
+
+h2{
+    background-color: beige;
+    height: 100px;
+    width: 100px;
+    padding: 100px;
+    box-sizing: border-box
+    ;
+    margin: 20px;
+    border: 10px black solid;
+}

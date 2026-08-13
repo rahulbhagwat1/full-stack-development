@@ -1,0 +1,35 @@
+.back{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 5px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    /* margin: 5px; */
+}
+
+.first{
+    background-color: red;
+    /* flex-grow: 1; */
+    /* flex-basis: 200px; */
+    /* flex:1 5 100px */
+}
+.second{
+    background-color:yellow;
+    /* flex-grow: 2; */
+    align-self: flex-start;
+}
+.third{
+    background-color:green;
+    /* flex-shrink: 5; */
+}
+.fourth{
+    background-color: orange;
+}

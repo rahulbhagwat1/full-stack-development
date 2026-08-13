@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.container{
+    padding: 20px;
+    position: relative;
+
+}
+
+.box{
+    height:100px;
+    width: 150px;
+    background-color: aqua;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: ease-out; fast then slow
+    animation-timing-function: ease-in; fast then slow 
+    animation-timing-function: ease-in-out ; slow start and slow end
+    */
+
+    
+
+    animation-timing-function:linear;
+    /* animation-direction: alternate; */
+    animation-delay: 2s;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 00px 0px 20px 10px white;
+}
+
+@keyframes move {
+    0%{
+        background-color: aqua;
+        top:20px;
+        left: 10px;;
+    }  
+    25%{
+        background-color: rgb(240, 137, 11);
+        top: 20px;
+        left:600px
+    }
+    50%{
+        background-color: rgb(7, 89, 29);
+        top: 400px;
+        left:600px
+    }
+    75%{
+        background-color: rgb(199, 218, 32);
+        top: 400px;
+        left:10px
+    }
+    100%{
+        background-color: aqua;
+        top:20px;
+        left: 10px;;
+    }
+}

@@ -1,0 +1,28 @@
+h1{
+    background-color:yellow;
+    border-bottom: 10px solid;
+    border-top: 10px solid;
+    /*border-width: 5px;
+    border-style: double;
+    border-color: black;
+    
+
+    border: solid 5px red;
+    padding: 10px;
+    */
+   
+}
+
+h2{
+    background-color: yellow;
+    border: 2px black solid;
+    margin: 10px ;
+    padding: 5px 10px 20px 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+p{
+    background-color: bisque;
+    padding: 20px 80px;
+}

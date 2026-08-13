@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    perspective: 500px;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+    box-shadow: 0px 0px 20px 10px white;
+    border-radius: 10px;
+    cursor: pointer;
+    /* transform: translate(0px ,0px) */
+    /* transform:skewy(20deg) */
+    /* transform: scale() */
+    /* transform: rotate(50deg) */
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 2s; 
+    transition: all 3s linear 0.5s*/
+    /* transition: all 3s;      */
+    animation-name:movw ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes movw {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* .box:hover{
+    /* background-color: beige;
+    height: 250px;
+    width: 250px; */
+    /* transform: scaley(2); */
+    /* transform: translateZ(100px); */
+    /*transform: rotateX(90deg); 
+}*/
+

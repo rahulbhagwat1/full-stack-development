@@ -1,0 +1,33 @@
+/*
+
+# base selection using id
+#Exercise{
+    background-color: yellow;
+}
+
+class base selection
+
+.arut{
+    background-color: azure;
+}
+
+group base selection
+
+*/
+
+#Exercise, .arut , h2{
+    background-color: #782264;
+}
+
+
+h1{
+    background-color: hsl(200, 50%, 50%);
+}
+
+
+ul{
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-style: italic;
+}

@@ -1,0 +1,45 @@
+
+*{
+    background-color: black;
+}
+
+#back{
+    background-color: yellow;
+    min-height: 200px;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#first{
+    background-color:blue;
+    height: 75px;
+    width: 100px;
+}
+
+#second{
+    background-color:blue;
+    height: 75px;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#third{
+    background-color:blue;
+    height: 75px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#fourth{
+    background-color: blue;
+    height: 75px;
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

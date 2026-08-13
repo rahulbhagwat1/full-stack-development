@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+body{
+    background-color: black;
+}
+
+.boxx{
+    display: flex;
+    background-color: antiquewhite;
+    padding: 5px;
+    gap: 5px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+}
+
+.first{
+    background-color: orange;
+}
+
+.second{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   background-color: brown ;
+}
+
+.inner{
+    background-color: aqua;
+    height: 100px;
+}
+.secondd{
+    background-color: rgb(212, 212, 14);
+}

@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0%;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    border-radius: 50%;
+    animation: move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+
+@keyframes move {
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+

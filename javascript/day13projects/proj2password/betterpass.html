@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffe0b2, #f8bbd0);
+    }
+
+    .container {
+        width: 380px;
+        background-color: white;
+        padding: 35px;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 26px;
+    }
+
+    .description {
+        text-align: center;
+        color: #777;
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 13px 15px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+    input:focus {
+        border-color: #7c4dff;
+        box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+    .rules {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+    }
+
+    .rules h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #444;
+    }
+
+    .rules p {
+        font-size: 13px;
+        color: #666;
+        margin: 6px 0;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <h1>Password Checker</h1>
+
+    <p class="description">
+        Create a strong password
+    </p>
+
+    <input id="pass" type="password" placeholder="Enter your password">
+
+    <h2 style="color: red;">Weak</h2>
+
+    <div class="rules">
+        <h3>Password should contain:</h3>
+
+        <p>✓ At least 8 characters</p>
+        <p>✓ One capital letter</p>
+        <p>✓ One small letter</p>
+        <p>✓ One number</p>
+        <p>✓ One special character</p>
+        <p>✓ No spaces</p>
+    </div>
+
+</div>
+
+<script>
+    const input = document.getElementById("pass")
+    const h2 = document.querySelector("h2");
+    
+    input.addEventListener("input",()=>{
+        const password=input.value;
+        let hasSmall=false;
+        let hasCapital=false;
+        let hasNumber=false;
+        let hasSpecial=false;
+
+
+        for(let i=0; i<password.length; i++){
+            if(password[i]>='A' && password[i]<='Z'){
+                hasCapital=true;
+            }
+            else if(password[i]>='a' && password[i]<='z'){
+                hasSmall=true;
+            }
+            else if(password[i]>='0' && password[i]<='9'){
+                hasNumber=true;
+            }
+            else if (
+                password[i] === "!" ||
+                password[i] === "@" ||
+                password[i] === "#" ||
+                password[i] === "$" ||
+                password[i] === "%" ||
+                password[i] === "&" ||
+                password[i] === "*"
+            ){
+                hasSpecial = true;
+            }
+        }
+        
+        if(password.includes(" ")){
+            h2.textContent="space in not Allowed";
+            h2.style.color='yellow'
+        }
+        else if(hasCapital && hasNumber && hasSmall && hasSpecial && password.length>=8 ){
+            h2.textContent="Strong";
+            h2.style.color='Green';
+        }
+        else{
+            h2.textContent = "week"
+            h2.style.color = "red";
+        }
+    })
+</script>
+```
+
+</body>
+</html>

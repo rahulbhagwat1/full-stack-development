@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: Arial, sans-serif;
+}
+
+/* Game title */
+body::before {
+    content: "TIC TAC TOE";
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+/* Game board */
+#tik {
+    width: 330px;
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background: #111827;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Individual boxes */
+#tik button {
+    border: none;
+    border-radius: 10px;
+    background: #374151;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+#tik button:hover {
+    background: #4b5563;
+    transform: scale(1.04);
+}
+
+/* Click effect */
+#tik button:active {
+    transform: scale(0.95);
+}
+
+/* Result */
+#result {
+    margin-top: 30px;
+    min-height: 45px;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    body::before {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    #tik {
+        width: 280px;
+        height: 280px;
+    }
+
+    #tik button {
+        font-size: 38px;
+    }
+
+    #result {
+        font-size: 22px;
+    }
+}
+#reset {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#reset:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+#reset:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: bisque;">
+    <input id="pass" type="password" placeholder="Enter password">
+    <h2 style="color: red;">Weak</h2>
+    <script>
+        const input = document.getElementById("pass")
+        const h2 = document.querySelector("h2");
+        
+        input.addEventListener("input",()=>{
+            const password=input.value;
+            console.log(password)
+            let hasSmall=false;
+            let hasCapital=false;
+            let hasNumber=false;
+            let hasSpecial=false;
+
+            for(let i=0; i<password.length; i++){
+                if(password[i]>='A' && password[i]<='Z'){
+                    hasCapital=true;
+                }
+                else if(password[i]>='a' && password[i]<='z'){
+                    hasSmall=true;
+                }
+                else if(password[i]>='0' && password[i]<='9'){
+                    hasNumber=true;
+                }
+                else if (
+                    password[i] === "!" ||
+                    password[i] === "@" ||
+                    password[i] === "#" ||
+                    password[i] === "$" ||
+                    password[i] === "%" ||
+                    password[i] === "&" ||
+                    password[i] === "*"
+                ) {
+                    hasSpecial = true;
+                }
+            }
+            
+            if(password.includes(" ")){
+                h2.textContent="space in not Allowed";
+                h2.style.color='yellow'
+            }
+            else if(hasCapital && hasNumber && hasSmall && hasSpecial && password.length>=8 ){
+                h2.textContent="Strong";
+                h2.style.color='Green';
+            }
+            else{
+                h2.textContent = "weak"
+                h2.style.color = "red";
+            }
+                
+            
+        })
+
+        
+    </script>
+</body>
+</html>

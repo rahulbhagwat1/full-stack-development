@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: white;
+        }
+
+        .weather-box {
+            width: 380px;
+            padding: 35px;
+            text-align: center;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        #cityInput {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        #searchBtn {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            background: #238636;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #searchBtn:hover {
+            background: #2ea043;
+        }
+
+        .location {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .temperature {
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="weather-box">
+
+        <h1 class="title">🌤️ Weather App</h1>
+
+        <div class="search-box">
+            <input
+                id="cityInput"
+                type="text"
+                placeholder="Enter city name"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+        </div>
+
+        <div class="location" id="locationnn">
+            Pune
+        </div>
+
+        <div class="temperature" id="temperaturee" >
+            28°C
+        </div>
+
+    </div>
+    <script src="./arut.js"></script>
+</body>
+</html>

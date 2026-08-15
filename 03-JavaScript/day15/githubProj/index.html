@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Users</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 35px 0;
+            font-size: 32px;
+        }
+
+        /* Search Section */
+        .searchBox {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #input {
+            width: 280px;
+            padding: 12px 15px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #161b22;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #input:focus {
+            border-color: #58a6ff;
+        }
+
+        #sreach {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #238636;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #sreach:hover {
+            background: #2ea043;
+            transform: translateY(-2px);
+        }
+
+        /* Users */
+        #mainDiv {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        #mainDiv > div {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.25s ease;
+        }
+
+        #mainDiv > div:hover {
+            transform: translateY(-6px);
+            border-color: #58a6ff;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        #mainDiv img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #30363d;
+            margin-bottom: 15px;
+        }
+
+        #mainDiv p {
+            color: #f0f6fc;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        /* Mobile */
+        @media (max-width: 500px) {
+            .searchBox {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #input {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            #sreach {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="searchBox">
+        <input id="input" type="number" placeholder="Number of users">
+        <button id="search">Search</button>
+    </div>
+
+    <h1>GitHub Users</h1>
+
+    <div id="mainDiv"></div>
+
+    <script src="arut.js"></script>
+
+</body>
+</html>

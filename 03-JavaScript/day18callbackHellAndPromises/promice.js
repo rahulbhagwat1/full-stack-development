@@ -14,8 +14,16 @@
 
 fetch(`https://api.github.com/users?per_page=20`)
 .then((x)=>{
+    if(!x.ok)
+        throw new Error("data not found")
     return x.json();
 })
 .then((data)=>{
     console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+})
+.finally(()=>{
+    console.log("i will always work");
 })

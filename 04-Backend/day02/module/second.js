@@ -1,3 +1,5 @@
-const payment = require("./first")
+const {isDeliverd} = require("./first")
 
-payment(500);
+// payment(500);
+
+isDeliverd("Mobile");

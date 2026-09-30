@@ -4,4 +4,8 @@ function payment(money){
     console.log(`payment of ${money} is done`)
 }
 
-module.exports=payment;
+exports.isDeliverd= function(item){
+    console.log(`${item} Deliverd to the person`)
+}
+
+//module.exports={payment,isDeliverd};

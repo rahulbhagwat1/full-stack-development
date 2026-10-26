@@ -10,7 +10,7 @@ const authUserMiddleware = async(req,res,next)=>{
         const existingUser = User.findById(payload.id);
         if(!existingUser){
             return res.status(404).json({
-                message:"invalid Credentials or plese login"
+                message:"invalid Credentials or please login"
             })
         }
         req.user = existingUser;
@@ -19,7 +19,7 @@ const authUserMiddleware = async(req,res,next)=>{
     catch(err){
         console.log(err);
         return res.status(404).json({
-            message:"invalid Credentials or plese login"
+            message:"internal server error"
         })
     }
 }

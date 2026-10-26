@@ -73,7 +73,7 @@ export const login= async(req,res)=>{
     try{
 
         const validateUser = loginSchema.safeParse(req.body);
-        if(!validateUser){
+        if(!validateUser.success){
             return res.status(400).json({
                 message : validateUser.error.issues[0].message
             });
@@ -81,9 +81,9 @@ export const login= async(req,res)=>{
 
         const {email,password} = validateUser.data;
 
-        const existingUser = User.findOne({email});
+        const existingUser = await User.findOne({email});
 
-        if(!existingUser){
+        if(!existingUser || existingUser.isDeleted){
             return res.status(401).json("invalid credentials");
         }
 
@@ -140,6 +140,22 @@ export const profile= async()=>{
         console.log(err);
         res.status(500).json({
             message: "Internal Server error"
+        })
+    }
+}
+
+export const Delete = async(req,res)=>{
+    try{
+        req.user.isDeleted=true
+        await req.user.save();
+        res.status(200).json({
+            message:"your profile deleted succesfully"
+        })
+    }
+    catch(err){
+        console.log(err);
+        res.status(500).json({
+            message:"Internal Server Error"
         })
     }
 }
